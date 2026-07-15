@@ -40,16 +40,9 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Preload the only local hero-critical image -->
-  <link rel="preload" as="image" href="/assets/portrait-cartoon.png" />
+  <!-- Self-hosted fonts: preload the hero-critical ones (no third-party round-trip) -->
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/bricolage.woff2" crossorigin fetchpriority="high" />
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/space-grotesk.woff2" crossorigin />
 
   <!-- Structured data -->
   <script type="application/ld+json">

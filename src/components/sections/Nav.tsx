@@ -1,6 +1,8 @@
 import type { CSSProperties } from "react";
+import { color, font } from "../../lib/tokens";
+import { navLinks } from "../../data/nav";
 
-const navLink: CSSProperties = {
+const linkStyle: CSSProperties = {
   color: "var(--ink)",
   padding: "8px 13px",
   borderRadius: "9px",
@@ -41,7 +43,7 @@ export default function Nav() {
               color: "var(--bg)",
               display: "grid",
               placeItems: "center",
-              fontFamily: "'Bricolage Grotesque'",
+              fontFamily: font.display,
               fontWeight: 800,
               fontSize: "19px",
               transform: "rotate(-6deg)",
@@ -49,16 +51,17 @@ export default function Nav() {
           >
             P
           </span>
-          <span style={{ fontFamily: "'JetBrains Mono'", fontSize: "13px", fontWeight: 500, letterSpacing: ".02em" }}>
-            prathamesh<span style={{ color: "#FF5C39" }}>.patil</span>
+          <span style={{ fontFamily: font.mono, fontSize: "13px", fontWeight: 500, letterSpacing: ".02em" }}>
+            prathamesh<span style={{ color: color.orange }}>.patil</span>
           </span>
         </a>
-        <div style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "'JetBrains Mono'", fontSize: "13px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: font.mono, fontSize: "13px" }}>
           <div className="nav-links" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-            <a href="#about" style={navLink}>about</a>
-            <a href="#work" style={navLink}>work</a>
-            <a href="#experience" style={navLink}>experience</a>
-            <a href="#writing" style={navLink}>writing</a>
+            {navLinks.map((l) => (
+              <a key={l.href} href={l.href} style={linkStyle}>
+                {l.label}
+              </a>
+            ))}
           </div>
           <button
             id="themeToggle"

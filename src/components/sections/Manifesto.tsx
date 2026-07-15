@@ -1,11 +1,6 @@
 import { Fragment } from "react";
-
-// [word, optional color]
-const words: Array<[string, string?]> = [
-  ["I"], ["obsess"], ["over"], ["the"], ["details", "#FF5C39"], ["people"], ["feel"], ["but"], ["never"], ["name"],
-  ["—"], ["the"], ["easing", "#2C6FF6"], ["of"], ["a"], ["transition,"], ["the"], ["rhythm", "#12B76A"], ["of"],
-  ["a"], ["grid,"], ["the"], ["way"], ["an"], ["interface"], ["answers", "#8B5CF6"], ["back."],
-];
+import { font } from "../../lib/tokens";
+import { manifestoWords } from "../../data/manifesto";
 
 export default function Manifesto() {
   return (
@@ -13,14 +8,14 @@ export default function Manifesto() {
       <p
         id="scrubText"
         style={{
-          fontFamily: "'Bricolage Grotesque'",
+          fontFamily: font.display,
           fontWeight: 700,
           fontSize: "clamp(27px,4.4vw,52px)",
           lineHeight: 1.3,
           letterSpacing: "-.02em",
         }}
       >
-        {words.map(([word, color], i) => (
+        {manifestoWords.map(({ word, color }, i) => (
           <Fragment key={i}>
             <span className="sw" data-c={color} style={{ opacity: 0.13 }}>
               {word}

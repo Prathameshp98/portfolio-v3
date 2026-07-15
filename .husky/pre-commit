@@ -1,0 +1,5 @@
+echo "▸ typecheck (tsc)…"
+npm run typecheck || exit 1
+
+echo "▸ lint + complexity (staged)…"
+npx lint-staged || exit 1

@@ -1,3 +1,7 @@
+  /* Self-hosted variable fonts (latin) — same-origin, no third-party round-trip */
+  @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:400 800;font-display:swap;src:url(/fonts/bricolage.woff2) format('woff2')}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/space-grotesk.woff2) format('woff2')}
+  @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/jetbrains-mono.woff2) format('woff2')}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{--bg:#FBF7EF;--ink:#1A1712;--card:#ffffff;--tint:#F1EADB;--muted:#4A443A;--mono2:#8C8577;font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -118,4 +122,11 @@
   @media(max-width:360px){
     #nav > div{padding:12px 12px!important}
     .nav-cta{padding:9px 12px!important}
+  }
+
+  /* ===== Toolkit chip pop-in (springy) ===== */
+  @keyframes chipPop{
+    0%{opacity:0;transform:translateY(16px) scale(.55) rotate(-7deg)}
+    62%{opacity:1;transform:translateY(-4px) scale(1.07) rotate(2deg)}
+    100%{opacity:1;transform:translateY(0) scale(1) rotate(0)}
   }
