@@ -33,7 +33,7 @@
   .hletter:hover{transform:translateY(-16px) rotate(-7deg) scale(1.1);color:#FF5C39}
   @keyframes portraitBob{0%,100%{transform:translateY(0) rotate(0deg) scale(1)}50%{transform:translateY(-9px) rotate(-1.5deg) scale(1.02)}}
   @keyframes blobMorph{0%,100%{border-radius:58% 42% 46% 54%/52% 48% 52% 48%}33%{border-radius:45% 55% 60% 40%/58% 42% 56% 44%}66%{border-radius:52% 48% 38% 62%/42% 60% 40% 58%}}
-  .blob{border-radius:58% 42% 46% 54%/52% 48% 52% 48%;animation:blobMorph 9s ease-in-out infinite}
+  .blob{border-radius:58% 42% 46% 54%/52% 48% 52% 48%;animation:blobMorph 9s ease-in-out infinite;-webkit-transform:translateZ(0);transform:translateZ(0);will-change:transform;-webkit-mask-image:-webkit-radial-gradient(white,black);isolation:isolate}
   .blob-back{border-radius:45% 55% 60% 40%/58% 42% 56% 44%;animation:blobMorph 9s ease-in-out -4.5s infinite}
   @keyframes spinSlow{to{transform:rotate(360deg)}}
   .portrait-img{animation:portraitBob 4.5s ease-in-out infinite;transform-origin:50% 80%}
