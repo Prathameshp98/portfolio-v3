@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary meta -->
+  <title>Prathamesh Patil — Fullstack Engineer (React &amp; Next.js)</title>
+  <meta name="description" content="Prathamesh Patil is a fullstack engineer in Mumbai with 4.5+ years building pixel-perfect, blazing-fast and accessible React &amp; Next.js products — currently at HowNow." />
+  <meta name="keywords" content="Prathamesh Patil, Fullstack Engineer, Frontend Engineer, React Developer, Next.js, TypeScript, Web Accessibility, Web Performance, Mumbai, Portfolio" />
+  <meta name="author" content="Prathamesh Patil" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://prathameshpatil.in/" />
+
+  <!-- Theme color (adapts to scheme) -->
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#FBF7EF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#16120B" media="(prefers-color-scheme: dark)" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Prathamesh Patil" />
+  <meta property="og:title" content="Prathamesh Patil — Fullstack Engineer (React &amp; Next.js)" />
+  <meta property="og:description" content="4.5+ years shipping pixel-perfect, blazing-fast and accessible React &amp; Next.js products — currently at HowNow." />
+  <meta property="og:url" content="https://prathameshpatil.in/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://prathameshpatil.in/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Prathamesh Patil — Fullstack Engineer" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prathamesh Patil — Fullstack Engineer (React &amp; Next.js)" />
+  <meta name="twitter:description" content="4.5+ years shipping pixel-perfect, blazing-fast and accessible React &amp; Next.js products — currently at HowNow." />
+  <meta name="twitter:image" content="https://prathameshpatil.in/og-image.png" />
+
+  <!-- Icons / PWA -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Preload the only local hero-critical image -->
+  <link rel="preload" as="image" href="/assets/portrait-cartoon.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://prathameshpatil.in/#person",
+        "name": "Prathamesh Patil",
+        "url": "https://prathameshpatil.in/",
+        "image": "https://prathameshpatil.in/assets/portrait-cartoon.png",
+        "jobTitle": "Fullstack Engineer",
+        "worksFor": { "@type": "Organization", "name": "HowNow", "url": "https://www.gethownow.com/" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" },
+        "email": "mailto:prathameshpatil2812@gmail.com",
+        "telephone": "+91-72087-90420",
+        "knowsAbout": ["React", "Next.js", "TypeScript", "Web Accessibility", "Web Performance", "Node.js", "Localization"],
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Saraswati College of Engineering" },
+        "sameAs": [
+          "https://github.com/Prathameshp98",
+          "https://www.linkedin.com/in/prathamesh-patil-988442197/",
+          "https://dev.to/prathamesh_patil_98"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://prathameshpatil.in/#website",
+        "url": "https://prathameshpatil.in/",
+        "name": "Prathamesh Patil — Portfolio",
+        "publisher": { "@id": "https://prathameshpatil.in/#person" },
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <script>
+    // Anti-FOUC: apply theme before React hydrates so there is no flash.
+    // Explicit saved choice wins; otherwise follow the OS/system color scheme.
+    try {
+      var t = localStorage.getItem("pp-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      if (t === "dark") document.body.dataset.theme = "dark";
+    } catch (e) {}
+  </script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "Prathamesh Patil — Fullstack Engineer",
+  "short_name": "Prathamesh Patil",
+  "description": "Portfolio of Prathamesh Patil, fullstack engineer building pixel-perfect, fast, accessible React & Next.js products.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FBF7EF",
+  "theme_color": "#FBF7EF",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
